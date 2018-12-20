@@ -16,6 +16,7 @@ api = tweepy.API(auth)
 INTERVAL = 30 * 60 #30 minutes
 
 while True:
+    print("Lyric incoming")
     lyric = get_lyric()
     api.update_status(lyric)
     time.sleep(INTERVAL)
