@@ -28,6 +28,6 @@ def get_lyric():
 	for i in range(n_words):
 		chain.append(np.random.choice(word_dict[chain[-1]]))
 
-	fin = str(' '.join(chain))
+	fin = str(' '.join(chain)).upper()
 	print(fin)
 	return fin
