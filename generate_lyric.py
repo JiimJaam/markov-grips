@@ -1,4 +1,5 @@
 import numpy as np
+import random
 
 def get_lyric():
 	words = open('DeathGrips.txt', encoding='utf8').read()
@@ -23,7 +24,7 @@ def get_lyric():
 
 	chain = [first_word]
 
-	n_words = 30
+	n_words = random.randint(10,30)
 
 	for i in range(n_words):
 		chain.append(np.random.choice(word_dict[chain[-1]]))
