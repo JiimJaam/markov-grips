@@ -6,7 +6,7 @@ import tweepy
 import sys
 import time
 
-words = open(r'C:\Users\crucha\Downloads\DeathGrips.txt', encoding='utf8').read()
+words = open('DeathGrips.txt', encoding='utf8').read()
 
 corpus = words.split()
 
