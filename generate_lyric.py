@@ -21,6 +21,9 @@ def get_lyric():
 			word_dict[word_1] = [word_2]
 	 
 	first_word = np.random.choice(corpus)
+	
+	while first_word.islower():
+    		first_word = np.random.choice(corpus)
 
 	chain = [first_word]
 
