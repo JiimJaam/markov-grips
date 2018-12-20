@@ -1,7 +1,7 @@
 import numpy as np
 
 def get_lyric():
-	words = open('./DeathGrips.txt', encoding='utf8').read()
+	words = open('DeathGrips.txt', encoding='utf8').read()
 
 	corpus = words.split()
 
@@ -28,4 +28,6 @@ def get_lyric():
 	for i in range(n_words):
 		chain.append(np.random.choice(word_dict[chain[-1]]))
 
-	return fin = str(' '.join(chain))
+	fin = str(' '.join(chain))
+	print(fin)
+	return fin
