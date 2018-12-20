@@ -24,7 +24,7 @@ def get_lyric():
 
 	chain = [first_word]
 
-	n_words = random.randint(10,30)
+	n_words = random.randint(4,30)
 
 	for i in range(n_words):
 		chain.append(np.random.choice(word_dict[chain[-1]]))
