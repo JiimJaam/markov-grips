@@ -2,7 +2,7 @@ import tweepy
 import sys
 import time
 
-from generate_lyric import fin
+from generate_lyric import get_lyric
 
 from os import environ
 CONSUMER_KEY = environ['CONSUMER_KEY']
