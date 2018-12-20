@@ -1,7 +1,7 @@
 import numpy as np
 
 def get_lyric():
-	words = open('DeathGrips.txt', encoding='utf8').read()
+	words = open('./DeathGrips.txt', encoding='utf8').read()
 
 	corpus = words.split()
 
