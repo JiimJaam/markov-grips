@@ -1,6 +1,7 @@
 import numpy as np
 import random
 
+
 def get_lyric():
 	words = open('DeathGrips.txt', encoding='utf8').read()
 
@@ -19,18 +20,22 @@ def get_lyric():
 			word_dict[word_1].append(word_2)
 		else:
 			word_dict[word_1] = [word_2]
-	 
+
 	first_word = np.random.choice(corpus)
 	
 	while first_word.islower():
-    		first_word = np.random.choice(corpus)
+		first_word = np.random.choice(corpus)
 
 	chain = [first_word]
 
-	n_words = random.randint(4,30)
+	n_words = random.randint(4, 30)
 
 	for i in range(n_words):
 		chain.append(np.random.choice(word_dict[chain[-1]]))
+
+	if len(chain) >= n_words:
+		while str(' '.join(chain))[-1:] != '.' and str(' '.join(chain))[-1:] != '?' and str(' '.join(chain))[-1:] != '!' and str(' '.join(chain))[-1:] != '\"':
+			chain.append(np.random.choice(word_dict[chain[-1]]))
 
 	fin = str(' '.join(chain)).upper()
 	print(fin)
